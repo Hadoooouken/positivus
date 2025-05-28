@@ -7,13 +7,13 @@ $tablet: 1023px;
 $mobile-above: 768px;
 $mobile: 767px;
 
-@mixin desktop-above {
+@mixin desctop-above {
   @media (min-width: $desctop-above) {
     @content;
   }
 }
 
-@mixin desktop {
+@mixin desctop {
   @media (max-width: $desctop) {
     @content;
   }
