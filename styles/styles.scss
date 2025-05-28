@@ -1,6 +1,9 @@
-@import 'normalize', 'fonts', 'mixins', 'media', 'variables', 'utils', 'globals';
+// @import './normalize', './fonts', './mixins', './media', './variables', './utils', './globals';
+@import 'normalize';
+@import 'fonts';
+@import 'mixins';
+@import 'media';
+@import 'variables';
+@import 'utils';
+@import 'globals';
 
-
-body {
-    background-color: beige;
-}
