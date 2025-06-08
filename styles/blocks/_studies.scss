@@ -1,13 +1,13 @@
 .studies {
-  @include desktop-above {
-    padding: 70px 60px;
-  }
-
   @include mobile-above {
     padding: 40px;
     color: var(--color-light);
     background-color: var(--color-dark);
     border-radius: var(--border-radius-large);
+  }
+
+  @include desktop-above {
+    padding: 70px 60px;
   }
 
   &__list {
@@ -55,7 +55,6 @@
   }
 
   &__description {
-    font-size: 20px;
     @include mobile {
       font-size: 16px;
     }
