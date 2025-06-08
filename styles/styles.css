@@ -959,4 +959,121 @@ h4 {
   .studies__link:active {
     opacity: 0.7;
   }
+}
+
+.process__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  counter-reset: custom-counter;
+  list-style: none;
+}
+@media (max-width: 767px) {
+  .process__list {
+    row-gap: 20px;
+  }
+}
+.process__item {
+  --counterContent: counter(custom-counter);
+  counter-increment: custom-counter;
+}
+.process__item:nth-child(-n+9) {
+  --counterContent: "0" counter(custom-counter);
+}
+.process__accordion {
+  --indicatorVercticalRotate: 90deg;
+  padding: 40px 60px;
+  background-color: var(--color-gray);
+  border-radius: var(--border-radius-large);
+  border: var(--border);
+  box-shadow: var(--shadow);
+  transition-duration: var(--transition-duration);
+}
+@media (hover: hover) {
+  .process__accordion:hover {
+    background-color: var(--color-accent);
+  }
+}
+@media (hover: none) {
+  .process__accordion:active {
+    background-color: var(--color-accent);
+  }
+}
+@media (max-width: 767px) {
+  .process__accordion {
+    padding: 30px;
+  }
+}
+.process__accordion[open] {
+  --indicatorVercticalRotate: 0deg;
+  background-color: var(--color-accent);
+}
+.process__accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 30px;
+  cursor: pointer;
+  user-select: none;
+}
+@media (max-width: 767px) {
+  .process__accordion-header {
+    column-gap: 28px;
+  }
+}
+.process__accordion-tittle {
+  font-size: clamp(18px, 30 / 1240 * 100vw, 30px);
+  display: flex;
+  align-items: center;
+  column-gap: 25px;
+}
+@media (max-width: 767px) {
+  .process__accordion-tittle {
+    column-gap: 33px;
+  }
+}
+.process__accordion-tittle::before {
+  content: var(--counterContent);
+  font-size: 2em;
+}
+@media (max-width: 767px) {
+  .process__accordion-tittle::before {
+    width: 30px;
+  }
+}
+.process__accordion-indicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 58px;
+  aspect-ratio: 1;
+  flex-shrink: 0;
+  position: relative;
+  border: var(--border);
+  border-radius: 50%;
+  background-color: var(--color-gray);
+}
+@media (max-width: 767px) {
+  .process__accordion-indicator {
+    width: 30px;
+  }
+}
+.process__accordion-indicator::before, .process__accordion-indicator::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 45%;
+  height: 10%;
+  background-color: var(--color-dark);
+}
+.process__accordion-indicator::after {
+  transition-duration: var(--transition-duration);
+  rotate: var(--indicatorVercticalRotate);
+}
+.process__accordion-body {
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: var(--border);
 }/*# sourceMappingURL=styles.css.map */
