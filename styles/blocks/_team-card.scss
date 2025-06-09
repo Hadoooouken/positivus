@@ -39,7 +39,7 @@
   }
 
   &__name {
-      &:not(:last-child) {
+    &:not(:last-child) {
       margin-bottom: 3px;
     }
   }
@@ -49,9 +49,9 @@
     padding-top: 28px;
     border-top: var(--border);
 
-      @include mobile {
-     margin-top: 20px;
-    padding-top: 20px;
-  }
+    @include mobile {
+      margin-top: 20px;
+      padding-top: 20px;
+    }
   }
 }
