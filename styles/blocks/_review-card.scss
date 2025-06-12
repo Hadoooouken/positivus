@@ -5,11 +5,22 @@
   flex-direction: column;
   row-gap: 48px;
 
+  @include mobile {
+    --reviewCardCornerWidth: 32px;
+    --reviewCardCornerOffsetLeft: 46px;
+
+    row-gap: 44px;
+  }
+
   &__body {
     position: relative;
     padding: 48px var(--reviewCardCornerOffsetLeft) 52px;
     border: 1px solid var(--color-accent);
     border-radius: var(--border-radius-large);
+
+    @include mobile {
+      padding: 30px 30px 30px 44px;
+    }
 
     &::after {
       @include square(var(--reviewCardCornerWidth));
@@ -37,5 +48,9 @@
 
   &__name {
     color: var(--color-accent);
+    font-size: 20px;
+    @include mobile {
+      font-size: 18px;
+    }
   }
 }
